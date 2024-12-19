@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="New GameJam Project"
-run/main_scene="res://game.tscn"
+run/main_scene="res://scenes/key_scenes/game.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Globals="*res://Globals.gd"
+Globals="*res://scripts/Globals.gd"
 
 [display]
 
