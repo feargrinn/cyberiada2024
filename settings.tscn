@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bcyks0tu2522p"]
+[gd_scene load_steps=3 format=3 uid="uid://bcyks0tu2522p"]
 
 [ext_resource type="Texture2D" uid="uid://ce5bugs8hwhb" path="res://textures/background_stars.png" id="1_2ep4u"]
+[ext_resource type="Script" path="res://settings.gd" id="1_qysbl"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -9,6 +10,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qysbl")
+
+[node name="background" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_2ep4u")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -289,13 +301,3 @@ size_flags_horizontal = 6
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 50
 text = "Confirm"
-
-[node name="background" type="TextureRect" parent="."]
-z_index = -1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_2ep4u")
