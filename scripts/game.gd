@@ -9,7 +9,11 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_released("ui_cancel"):
 		get_tree().change_scene_to_file("res://scenes/key_scenes/main_menu.tscn")
-
+	for a in $"../MarginContainer/HBoxContainer/HBoxContainer".get_children():
+		print(a)
+		var b = a.name
+		print(b,'is the thing im tryna print ',Globals.get(b))
+		
 func lose(why = "No reasyon at all"):
 	var gameovar = scene.instantiate()
 	add_child(gameovar) 
