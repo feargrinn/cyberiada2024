@@ -9,6 +9,6 @@ func _ready() -> void:
 func _on_button_pressed(button_name : String):
 	match button_name:
 		"BACK":
-			get_tree().change_scene_to_file("res://main_menu.tscn")
+			get_tree().change_scene_to_file("res://scenes/key_scenes/main_menu.tscn")
 		"CONFIRM":
-			get_tree().change_scene_to_file("res://main_menu.tscn")
+			get_tree().change_scene_to_file("res://scenes/key_scenes/main_menu.tscn")

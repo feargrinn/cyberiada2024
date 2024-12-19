@@ -11,8 +11,8 @@ func _ready() -> void:
 func _on_button_pressed(button_name : String):
 	match button_name:
 		"PLAY":
-			get_tree().change_scene_to_file("res://game.tscn")
+			get_tree().change_scene_to_file("res://scenes/key_scenes/game.tscn")
 		"SETTINGS":
-			get_tree().change_scene_to_file("res://settings.tscn")
+			get_tree().change_scene_to_file("res://scenes/key_scenes/settings.tscn")
 		"QUIT":
 			get_tree().quit()
