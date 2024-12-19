@@ -11,7 +11,6 @@ func _process(_delta: float) -> void:
 		get_tree().change_scene_to_file("res://scenes/key_scenes/main_menu.tscn")
 
 func lose(why = "No reasyon at all"):
-	$AudioStreamPlayer2
 	var gameovar = scene.instantiate()
 	
 	print("You lost ", why, " :(")
