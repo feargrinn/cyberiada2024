@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhawgog1wv7ao"]
+
+[ext_resource type="Script" path="res://scripts/wrench.gd" id="1_0lgf2"]
+[ext_resource type="Texture2D" uid="uid://qimeypyi6myr" path="res://textures/itemy kluczowe/gasnica.final.png" id="2_towed"]
+[ext_resource type="AudioStream" uid="uid://dln8bt076c26d" path="res://audio/podnoszenie zaworu.mp3" id="3_wpm1o"]
+[ext_resource type="AudioStream" uid="uid://bqbv8voumni2l" path="res://audio/połączenie zaworów.mp3" id="4_7l88b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_410uk"]
+radius = 19.9249
+
+[node name="extinguisher" type="Area2D" groups=["interactable"]]
+position = Vector2(1020, 730)
+script = ExtResource("1_0lgf2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_410uk")
+
+[node name="sprite" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("2_towed")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_wpm1o")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_7l88b")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

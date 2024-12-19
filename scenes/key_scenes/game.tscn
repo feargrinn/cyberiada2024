@@ -1,17 +1,29 @@
-[gd_scene load_steps=16 format=4 uid="uid://dr6pjruspb74u"]
+[gd_scene load_steps=28 format=4 uid="uid://dr6pjruspb74u"]
 
-[ext_resource type="Texture2D" uid="uid://yu3wvduxrvn1" path="res://textures/background_stars.png" id="1_0hcai"]
+[ext_resource type="Texture2D" uid="uid://dtwgxia2w7r64" path="res://textures/background_stars.png" id="1_0hcai"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_mhe3d"]
 [ext_resource type="FontFile" uid="uid://cvka4xpwf0gfv" path="res://font/Pixelify_Sans/static/PixelifySans-Regular.ttf" id="1_orwdl"]
 [ext_resource type="PackedScene" uid="uid://bsadwdkvdmcp1" path="res://scenes/key_scenes/characterA.tscn" id="3_l4nfy"]
-[ext_resource type="Texture2D" uid="uid://dnel7ael7qtfg" path="res://textures/tilemap/tilemap.png" id="4_cmho3"]
+[ext_resource type="Texture2D" uid="uid://d2qohk16bplma" path="res://textures/tilemap/tilemap.png" id="4_cmho3"]
 [ext_resource type="Script" path="res://scripts/character_a.gd" id="4_y8s4w"]
 [ext_resource type="PackedScene" uid="uid://bskyjnmvgga3m" path="res://scenes/key_scenes/characterB.tscn" id="5_uwlxt"]
 [ext_resource type="PackedScene" uid="uid://bhx5ge86pfjav" path="res://scenes/smaller_scenes/wrench.tscn" id="6_hnola"]
 [ext_resource type="AudioStream" uid="uid://d3arsbkqn4ub5" path="res://audio/mainthemeiguess.mp3" id="8_hkgy1"]
-[ext_resource type="PackedScene" uid="uid://b0fky7fjf4adh" path="res://scenes/smaller_scenes/valve.tscn" id="9_e188o"]
-[ext_resource type="Texture2D" uid="uid://dex1vx3ycnhca" path="res://textures/statek/ship_ref.png" id="11_dk6ki"]
+[ext_resource type="PackedScene" uid="uid://8l3xkxatwxlj" path="res://scenes/smaller_scenes/valve.tscn" id="9_e188o"]
+[ext_resource type="Texture2D" uid="uid://vvhk1pvjkfer" path="res://textures/statek/ship_ref.png" id="11_dk6ki"]
 [ext_resource type="PackedScene" uid="uid://c3er8gmc1yhdc" path="res://scenes/smaller_scenes/oxygen_fixer.tscn" id="11_njxq5"]
+[ext_resource type="PackedScene" uid="uid://dhawgog1wv7ao" path="res://scenes/smaller_scenes/extinguisher.tscn" id="11_tvbxs"]
+[ext_resource type="Texture2D" uid="uid://dhbblg65bmarf" path="res://textures/Symbole GUI statku/EnergiaGood.png" id="13_tejoq"]
+[ext_resource type="Texture2D" uid="uid://6ljgm8vxghyi" path="res://textures/consol_kokpit.png" id="14_iqsbj"]
+[ext_resource type="Texture2D" uid="uid://71eba7k7pn8o" path="res://textures/Symbole GUI statku/o2Good.png" id="14_vuio4"]
+[ext_resource type="Texture2D" uid="uid://2pan1c2pbhsd" path="res://textures/reaktor.png" id="15_pwgwn"]
+[ext_resource type="Texture2D" uid="uid://5evfsd4vftr2" path="res://textures/Symbole GUI statku/KokpitGood.png" id="15_wf0lg"]
+[ext_resource type="Texture2D" uid="uid://bfaub4ja2x5gt" path="res://textures/Symbole GUI statku/ReaktorGood.png" id="16_63hdj"]
+[ext_resource type="Texture2D" uid="uid://cs74cmko4lp2e" path="res://textures/table_lab.png" id="16_eqj1l"]
+[ext_resource type="Texture2D" uid="uid://bqro4edpinsnn" path="res://textures/Symbole GUI statku/WorkshopGood.png" id="17_pxd5n"]
+[ext_resource type="Texture2D" uid="uid://cy4mknu2nivo2" path="res://textures/Symbole GUI statku/LabGood.png" id="18_0hldj"]
+[ext_resource type="Texture2D" uid="uid://yraqxdibqe5u" path="res://textures/Symbole GUI statku/CisnienieGood.png" id="19_1n7c5"]
+[ext_resource type="Texture2D" uid="uid://bevjoqxs7fevx" path="res://textures/Symbole GUI statku/SilnikGood.png" id="20_pm5kd"]
 
 [sub_resource type="Theme" id="Theme_uob01"]
 resource_name = "default_theme"
@@ -110,6 +122,9 @@ position = Vector2(973, 731)
 [node name="valve" parent="game" instance=ExtResource("9_e188o")]
 position = Vector2(1020, 730)
 
+[node name="extinguisher" parent="game" instance=ExtResource("11_tvbxs")]
+position = Vector2(1316, 601)
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="game"]
 stream = ExtResource("8_hkgy1")
 volume_db = -15.0
@@ -118,6 +133,19 @@ parameters/looping = true
 
 [node name="OxygenFixer" parent="game" instance=ExtResource("11_njxq5")]
 position = Vector2(1277, 440)
+
+[node name="ConsolKokpit" type="Sprite2D" parent="game"]
+position = Vector2(1359, 537)
+rotation = 1.5708
+texture = ExtResource("14_iqsbj")
+
+[node name="Reaktor" type="Sprite2D" parent="game"]
+position = Vector2(1102, 446)
+texture = ExtResource("15_pwgwn")
+
+[node name="TableLab" type="Sprite2D" parent="game"]
+position = Vector2(986, 439)
+texture = ExtResource("16_eqj1l")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -128,45 +156,53 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control"]
+texture = ExtResource("13_tejoq")
 
 [node name="Control2" type="Control" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control2"]
+texture = ExtResource("14_vuio4")
 
 [node name="Control3" type="Control" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control3"]
+texture = ExtResource("15_wf0lg")
 
 [node name="Control4" type="Control" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control4"]
+texture = ExtResource("16_63hdj")
 
 [node name="Control5" type="Control" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control5"]
+texture = ExtResource("17_pxd5n")
 
 [node name="Control6" type="Control" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control6"]
+texture = ExtResource("18_0hldj")
 
 [node name="Control7" type="Control" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control7"]
+texture = ExtResource("19_1n7c5")
 
 [node name="Control8" type="Control" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control8"]
+texture = ExtResource("20_pm5kd")

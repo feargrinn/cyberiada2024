@@ -1,6 +1,6 @@
 extends Area2D
 
-const default_time = 10
+const default_time = 100
 var timer : Timer
 
 func _ready() -> void:
@@ -15,4 +15,3 @@ func interact(_who_interacted : Node2D):
 	timer.stop()
 	timer.start(default_time * Globals.urgency)
 	Globals.urgency *= 0.95
-	print('i fixed oxy gene!')
