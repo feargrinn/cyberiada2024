@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dopij2nph7bxl"
+path="res://.godot/imported/klikanie konsoli2.mp3-0fa4444e27c37a5fef346c4f6ba17a1a.mp3str"
+
+[deps]
+
+source_file="res://audio/klikanie konsoli2.mp3"
+dest_files=["res://.godot/imported/klikanie konsoli2.mp3-0fa4444e27c37a5fef346c4f6ba17a1a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

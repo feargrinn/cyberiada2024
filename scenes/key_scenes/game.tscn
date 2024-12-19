@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://dr6pjruspb74u"]
+[gd_scene load_steps=16 format=4 uid="uid://dr6pjruspb74u"]
 
 [ext_resource type="Texture2D" uid="uid://nl238rn7651r" path="res://textures/background_stars.png" id="1_0hcai"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_mhe3d"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bhx5ge86pfjav" path="res://scenes/smaller_scenes/wrench.tscn" id="6_hnola"]
 [ext_resource type="AudioStream" uid="uid://d3arsbkqn4ub5" path="res://audio/mainthemeiguess.mp3" id="8_hkgy1"]
 [ext_resource type="PackedScene" path="res://scenes/smaller_scenes/valve.tscn" id="9_e188o"]
+[ext_resource type="AudioStream" uid="uid://bhkvkl2wm1rt1" path="res://audio/fail minigierki.mp3" id="11_4xl8t"]
 [ext_resource type="PackedScene" uid="uid://c3er8gmc1yhdc" path="res://scenes/smaller_scenes/oxygen_fixer.tscn" id="11_njxq5"]
 
 [sub_resource type="Theme" id="Theme_uob01"]
@@ -69,6 +70,10 @@ stream = ExtResource("8_hkgy1")
 volume_db = -15.0
 bus = &"Music"
 parameters/looping = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="game"]
+stream = ExtResource("11_4xl8t")
+bus = &"SFX"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2

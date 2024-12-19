@@ -3,6 +3,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$AudioStreamPlayer.play()
 	for object in $MarginContainer/VBoxContainer.get_children():
 		if object is Button:
 			object.connect("pressed", _on_button_pressed.bind(object.name))

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dln8bt076c26d"
+path="res://.godot/imported/podnoszenie zaworu.mp3-4918ed7b9711b78872a85d1248186e32.mp3str"
+
+[deps]
+
+source_file="res://audio/podnoszenie zaworu.mp3"
+dest_files=["res://.godot/imported/podnoszenie zaworu.mp3-4918ed7b9711b78872a85d1248186e32.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

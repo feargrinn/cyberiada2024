@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6qrhqix854t2"
+path="res://.godot/imported/kładzenie klucza.mp3-6ab28c5f48b4e1917ecf79664430a056.mp3str"
+
+[deps]
+
+source_file="res://audio/kładzenie klucza.mp3"
+dest_files=["res://.godot/imported/kładzenie klucza.mp3-6ab28c5f48b4e1917ecf79664430a056.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
