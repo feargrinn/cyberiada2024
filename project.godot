@@ -10,7 +10,6 @@ config_version=5
 
 [application]
 
-config/name="New GameJam Project"
 config/name="gamejam working"
 run/main_scene="res://scenes/key_scenes/game.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
