@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=4 uid="uid://dr6pjruspb74u"]
+[gd_scene load_steps=11 format=4 uid="uid://dr6pjruspb74u"]
 
 [ext_resource type="Texture2D" uid="uid://nl238rn7651r" path="res://textures/background_stars.png" id="1_0hcai"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_mhe3d"]
 [ext_resource type="Texture2D" uid="uid://b3kv3gwverjnd" path="res://icon.svg" id="2_16m80"]
 [ext_resource type="PackedScene" uid="uid://bsadwdkvdmcp1" path="res://scenes/key_scenes/characterA.tscn" id="3_l4nfy"]
 [ext_resource type="Script" path="res://scripts/character_a.gd" id="4_y8s4w"]
 [ext_resource type="PackedScene" uid="uid://bskyjnmvgga3m" path="res://scenes/key_scenes/characterB.tscn" id="5_uwlxt"]
 [ext_resource type="PackedScene" uid="uid://bhx5ge86pfjav" path="res://scenes/smaller_scenes/wrench.tscn" id="6_hnola"]
+[ext_resource type="AudioStream" uid="uid://d3arsbkqn4ub5" path="res://audio/mainthemeiguess.mp3" id="8_hkgy1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qgrxv"]
 texture = ExtResource("2_16m80")
@@ -27,6 +29,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="game" type="Node2D" parent="."]
+script = ExtResource("1_mhe3d")
 
 [node name="Parallax2D" type="Parallax2D" parent="game"]
 repeat_size = Vector2(1920, 0)
@@ -49,6 +52,12 @@ script = ExtResource("4_y8s4w")
 
 [node name="wrench" parent="game" groups=["interactable"] instance=ExtResource("6_hnola")]
 position = Vector2(665, 219)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="game"]
+stream = ExtResource("8_hkgy1")
+volume_db = -15.0
+bus = &"Music"
+parameters/looping = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
