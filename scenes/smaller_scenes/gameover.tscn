@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://22p2myqs3rwd" path="res://textures/tlo/background_stars_tileable_1920x1080.png" id="1_40uex"]
 [ext_resource type="Script" path="res://scripts/gameover.gd" id="1_c7ko0"]
-[ext_resource type="Theme" path="res://scenes/game.tres" id="1_whbm1"]
+[ext_resource type="Theme" uid="uid://cogjbi1cl83sv" path="res://scenes/game.tres" id="1_whbm1"]
 [ext_resource type="AudioStream" uid="uid://bhkvkl2wm1rt1" path="res://audio/fail minigierki.mp3" id="4_4upwq"]
 
 [node name="gameover" type="Control"]
@@ -101,7 +101,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 32
-text = "quit to main"
+text = "try again"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_4upwq")
