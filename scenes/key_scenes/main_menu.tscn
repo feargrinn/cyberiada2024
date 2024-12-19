@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://nl238rn7651r" path="res://textures/background_stars.png" id="1_7472d"]
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_gugel"]
-[ext_resource type="Theme" uid="uid://cogjbi1cl83sv" path="res://scenes/game.tres" id="1_kqjxe"]
+[ext_resource type="Theme" path="res://scenes/game.tres" id="1_kqjxe"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3

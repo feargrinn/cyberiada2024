@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bskyjnmvgga3m" path="res://scenes/key_scenes/characterB.tscn" id="5_uwlxt"]
 [ext_resource type="PackedScene" uid="uid://bhx5ge86pfjav" path="res://scenes/smaller_scenes/wrench.tscn" id="6_hnola"]
 [ext_resource type="AudioStream" uid="uid://d3arsbkqn4ub5" path="res://audio/mainthemeiguess.mp3" id="8_hkgy1"]
-[ext_resource type="PackedScene" uid="uid://b0fky7fjf4adh" path="res://scenes/smaller_scenes/valve.tscn" id="9_e188o"]
+[ext_resource type="PackedScene" path="res://scenes/smaller_scenes/valve.tscn" id="9_e188o"]
 [ext_resource type="PackedScene" uid="uid://c3er8gmc1yhdc" path="res://scenes/smaller_scenes/oxygen_fixer.tscn" id="11_njxq5"]
 
 [sub_resource type="Theme" id="Theme_uob01"]
