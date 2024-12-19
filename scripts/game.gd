@@ -12,8 +12,6 @@ func _process(_delta: float) -> void:
 
 func lose(why = "No reasyon at all"):
 	var gameovar = scene.instantiate()
-	
-	print("You lost ", why, " :(")
 	add_child(gameovar) 
 	gameovar.losingtext.text = why
 	remove_child(gameovar)

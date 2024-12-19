@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://diptba46xj04l"]
+[gd_scene load_steps=4 format=3 uid="uid://c0hbvqspopmhe"]
 
 [ext_resource type="Texture2D" uid="uid://dospsccqkumma" path="res://textures/tlo/background_stars_tileable_1920x1080.png" id="1_40uex"]
 [ext_resource type="Script" path="res://scripts/gameover.gd" id="1_c7ko0"]
-[ext_resource type="Theme" path="res://scenes/game.tres" id="1_whbm1"]
+[ext_resource type="Theme" uid="uid://cogjbi1cl83sv" path="res://scenes/game.tres" id="1_whbm1"]
 
 [node name="gameover" type="Control"]
 layout_mode = 3
