@@ -1,24 +1,18 @@
 extends Area2D
 
-var currently_interactable = false
+const default_time = 10
+var timer : Timer
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	timer = Timer.new()
+	timer.one_shot = true
+	add_child(timer)
+	timer.start(default_time)
+	timer.start()
+	timer.connect("timeout", get_tree().root.get_node("gui/game").lose.bind("Oxygen Timeout :("))
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-func oxygen_entered(_area: Node2D) -> void:
-	currently_interactable = true
-	# Replace with function body.
-
-
-func oxygen_exited(_area: Node2D) -> void:
-	currently_interactable = false
-	pass # Replace with function body.\
-
-func interact():
-	print('i did an inter act')
+func interact(_who_interacted : Node2D):
+	timer.stop()
+	timer.start(default_time * Globals.urgency)
+	Globals.urgency *= 0.95
+	print('i fixed oxy gene!')

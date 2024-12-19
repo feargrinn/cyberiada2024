@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://dr6pjruspb74u"]
+[gd_scene load_steps=15 format=4 uid="uid://dr6pjruspb74u"]
 
 [ext_resource type="Texture2D" uid="uid://nl238rn7651r" path="res://textures/background_stars.png" id="1_0hcai"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_mhe3d"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bhx5ge86pfjav" path="res://scenes/smaller_scenes/wrench.tscn" id="6_hnola"]
 [ext_resource type="AudioStream" uid="uid://d3arsbkqn4ub5" path="res://audio/mainthemeiguess.mp3" id="8_hkgy1"]
 [ext_resource type="PackedScene" uid="uid://b0fky7fjf4adh" path="res://scenes/smaller_scenes/valve.tscn" id="9_e188o"]
+[ext_resource type="PackedScene" uid="uid://c3er8gmc1yhdc" path="res://scenes/smaller_scenes/oxygen_fixer.tscn" id="11_njxq5"]
 
 [sub_resource type="Theme" id="Theme_uob01"]
 resource_name = "default_theme"
@@ -27,7 +28,7 @@ texture_region_size = Vector2i(8, 8)
 tile_size = Vector2i(8, 8)
 sources/1 = SubResource("TileSetAtlasSource_qgrxv")
 
-[node name="MarginContainer" type="MarginContainer"]
+[node name="gui" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -120,3 +121,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control8"]
+
+[node name="OxygenFixer" parent="." instance=ExtResource("11_njxq5")]
+position = Vector2(531, 224)
