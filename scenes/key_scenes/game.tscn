@@ -1,17 +1,26 @@
-[gd_scene load_steps=16 format=4 uid="uid://dr6pjruspb74u"]
+[gd_scene load_steps=26 format=4 uid="uid://dr6pjruspb74u"]
 
-[ext_resource type="Texture2D" uid="uid://yu3wvduxrvn1" path="res://textures/background_stars.png" id="1_0hcai"]
+[ext_resource type="Texture2D" uid="uid://dtwgxia2w7r64" path="res://textures/background_stars.png" id="1_0hcai"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_mhe3d"]
 [ext_resource type="FontFile" uid="uid://cvka4xpwf0gfv" path="res://font/Pixelify_Sans/static/PixelifySans-Regular.ttf" id="1_orwdl"]
 [ext_resource type="PackedScene" uid="uid://bsadwdkvdmcp1" path="res://scenes/key_scenes/characterA.tscn" id="3_l4nfy"]
-[ext_resource type="Texture2D" uid="uid://dnel7ael7qtfg" path="res://textures/tilemap/tilemap.png" id="4_cmho3"]
+[ext_resource type="Texture2D" uid="uid://d2qohk16bplma" path="res://textures/tilemap/tilemap.png" id="4_cmho3"]
 [ext_resource type="Script" path="res://scripts/character_a.gd" id="4_y8s4w"]
 [ext_resource type="PackedScene" uid="uid://bskyjnmvgga3m" path="res://scenes/key_scenes/characterB.tscn" id="5_uwlxt"]
 [ext_resource type="PackedScene" uid="uid://bhx5ge86pfjav" path="res://scenes/smaller_scenes/wrench.tscn" id="6_hnola"]
 [ext_resource type="AudioStream" uid="uid://d3arsbkqn4ub5" path="res://audio/mainthemeiguess.mp3" id="8_hkgy1"]
-[ext_resource type="PackedScene" uid="uid://b0fky7fjf4adh" path="res://scenes/smaller_scenes/valve.tscn" id="9_e188o"]
-[ext_resource type="Texture2D" uid="uid://dex1vx3ycnhca" path="res://textures/statek/ship_ref.png" id="11_dk6ki"]
+[ext_resource type="PackedScene" uid="uid://8l3xkxatwxlj" path="res://scenes/smaller_scenes/valve.tscn" id="9_e188o"]
+[ext_resource type="Texture2D" uid="uid://vvhk1pvjkfer" path="res://textures/statek/ship_ref.png" id="11_dk6ki"]
 [ext_resource type="PackedScene" uid="uid://c3er8gmc1yhdc" path="res://scenes/smaller_scenes/oxygen_fixer.tscn" id="11_njxq5"]
+[ext_resource type="Script" path="res://scenes/key_scenes/medbay_oxygen.gd" id="13_y0geu"]
+[ext_resource type="Texture2D" uid="uid://yraqxdibqe5u" path="res://textures/Symbole GUI statku/CisnienieGood.png" id="14_elmuy"]
+[ext_resource type="Texture2D" uid="uid://dhbblg65bmarf" path="res://textures/Symbole GUI statku/EnergiaGood.png" id="15_22m7y"]
+[ext_resource type="Texture2D" uid="uid://5evfsd4vftr2" path="res://textures/Symbole GUI statku/KokpitGood.png" id="16_w41h1"]
+[ext_resource type="Texture2D" uid="uid://cy4mknu2nivo2" path="res://textures/Symbole GUI statku/LabGood.png" id="17_qer5v"]
+[ext_resource type="Texture2D" uid="uid://71eba7k7pn8o" path="res://textures/Symbole GUI statku/o2Good.png" id="18_0mwhp"]
+[ext_resource type="Texture2D" uid="uid://bfaub4ja2x5gt" path="res://textures/Symbole GUI statku/ReaktorGood.png" id="19_pffvp"]
+[ext_resource type="Texture2D" uid="uid://bevjoqxs7fevx" path="res://textures/Symbole GUI statku/SilnikGood.png" id="20_8cfy6"]
+[ext_resource type="Texture2D" uid="uid://bqro4edpinsnn" path="res://textures/Symbole GUI statku/WorkshopGood.png" id="21_03kw8"]
 
 [sub_resource type="Theme" id="Theme_uob01"]
 resource_name = "default_theme"
@@ -56,6 +65,8 @@ texture_region_size = Vector2i(2, 2)
 tile_size = Vector2i(4, 4)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_2upoi")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dja3j"]
 
 [node name="gui" type="MarginContainer"]
 anchors_preset = 15
@@ -119,54 +130,93 @@ parameters/looping = true
 [node name="OxygenFixer" parent="game" instance=ExtResource("11_njxq5")]
 position = Vector2(1277, 440)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="medbay_oxygen" type="Area2D" parent="game" groups=["interactable"]]
+position = Vector2(831, 579)
+script = ExtResource("13_y0geu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/medbay_oxygen"]
+shape = SubResource("RectangleShape2D_dja3j")
+
+[node name="ColorRect" type="ColorRect" parent="game/medbay_oxygen"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 42
+theme_override_constants/margin_top = 42
+theme_override_constants/margin_right = 42
+theme_override_constants/margin_bottom = 42
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 
-[node name="Control" type="Control" parent="HBoxContainer"]
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
 
-[node name="Control2" type="Control" parent="HBoxContainer"]
+[node name="cisnienie" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/HBoxContainer/cisnienie"]
+texture = ExtResource("14_elmuy")
+
+[node name="energia" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control2"]
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/HBoxContainer/energia"]
+texture = ExtResource("15_22m7y")
 
-[node name="Control3" type="Control" parent="HBoxContainer"]
+[node name="kokpit" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control3"]
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/HBoxContainer/kokpit"]
+texture = ExtResource("16_w41h1")
 
-[node name="Control4" type="Control" parent="HBoxContainer"]
+[node name="lab" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control4"]
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/HBoxContainer/lab"]
+texture = ExtResource("17_qer5v")
 
-[node name="Control5" type="Control" parent="HBoxContainer"]
+[node name="o2" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control5"]
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/HBoxContainer/o2"]
+texture = ExtResource("18_0mwhp")
 
-[node name="Control6" type="Control" parent="HBoxContainer"]
+[node name="reaktor" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control6"]
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/HBoxContainer/reaktor"]
+texture = ExtResource("19_pffvp")
 
-[node name="Control7" type="Control" parent="HBoxContainer"]
+[node name="silnik" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control7"]
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/HBoxContainer/silnik"]
+texture = ExtResource("20_8cfy6")
 
-[node name="Control8" type="Control" parent="HBoxContainer"]
+[node name="workship" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control8"]
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/HBoxContainer/workship"]
+texture = ExtResource("21_03kw8")

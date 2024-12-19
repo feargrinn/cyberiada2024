@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://8l3xkxatwxlj"]
 
 [ext_resource type="Script" path="res://scripts/wrench.gd" id="1_g3dox"]
-[ext_resource type="Texture2D" uid="uid://qea17w285j3i" path="res://textures/valve.png" id="2_msnge"]
-[ext_resource type="Texture2D" uid="uid://cxoa5rrnghvrb" path="res://textures/skrzynka2.png" id="3_gcnbs"]
+[ext_resource type="Texture2D" uid="uid://b68w8xdb5i1cy" path="res://textures/valve.png" id="2_msnge"]
+[ext_resource type="Texture2D" uid="uid://bxai8whtwwn47" path="res://textures/skrzynka2.png" id="3_gcnbs"]
 [ext_resource type="AudioStream" uid="uid://dln8bt076c26d" path="res://audio/podnoszenie zaworu.mp3" id="4_4raqt"]
 [ext_resource type="AudioStream" uid="uid://bqbv8voumni2l" path="res://audio/połączenie zaworów.mp3" id="5_1fign"]
 

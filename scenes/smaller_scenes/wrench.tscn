@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://bhx5ge86pfjav"]
 
 [ext_resource type="Script" path="res://scripts/wrench.gd" id="1_5swg1"]
-[ext_resource type="Texture2D" uid="uid://810tt6uhmsor" path="res://textures/wrench_sprite_24x12.png" id="2_pqs1x"]
-[ext_resource type="Texture2D" uid="uid://tmnv7wa28my7" path="res://textures/skrzynka1.png" id="3_c7p8j"]
+[ext_resource type="Texture2D" uid="uid://ce32f720iuyxp" path="res://textures/wrench_sprite_24x12.png" id="2_pqs1x"]
+[ext_resource type="Texture2D" uid="uid://ckfrb6eol1ndx" path="res://textures/skrzynka1.png" id="3_c7p8j"]
 [ext_resource type="AudioStream" uid="uid://bmjr8mhp5jy5w" path="res://audio/podnoszenie klucza.mp3" id="4_wowo1"]
 [ext_resource type="AudioStream" uid="uid://6qrhqix854t2" path="res://audio/kładzenie klucza.mp3" id="5_ofk8w"]
 
