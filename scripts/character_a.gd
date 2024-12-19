@@ -24,11 +24,6 @@ func _physics_process(_delta: float) -> void:
 # checks if player collides with interactable areas, interacts if
 func try_to_interact():
 	#print(get_tree().get_nodes_in_group("interactable"))
-	for i in get_tree().get_nodes_in_group("interactable"):
-		if i.currently_interactable:
-			i.interact()
-		else:
-			print("nope")
-	#        print($".."/OxygenFixer.currently_interactable)
-	
-	pass
+	for area in get_tree().get_nodes_in_group("interactable"):
+		if area.overlaps_body(self):
+			area.interact(self)

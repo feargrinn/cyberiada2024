@@ -1,16 +1,12 @@
 extends Area2D
 
-var currently_interactable = false
-
-
-
-
-func _on_body_entered(body: Node2D) -> void:
-	currently_interactable = true
-
-
-func _on_body_exited(body: Node2D) -> void:
-	currently_interactable = false
-
 func interact(player: Node2D) -> void:
-	pass
+	var sprite = get_node_or_null("sprite")
+	if sprite:
+		remove_child(sprite)
+		player.add_child(sprite)
+	elif player.get_node_or_null("sprite"):
+		sprite = player.get_node("sprite")
+		if(sprite != null):
+			player.remove_child(sprite)
+			add_child(sprite)

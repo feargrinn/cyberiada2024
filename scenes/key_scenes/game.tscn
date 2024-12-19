@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://dr6pjruspb74u"]
+[gd_scene load_steps=9 format=4 uid="uid://dr6pjruspb74u"]
 
 [ext_resource type="Texture2D" uid="uid://nl238rn7651r" path="res://textures/background_stars.png" id="1_0hcai"]
 [ext_resource type="Texture2D" uid="uid://b3kv3gwverjnd" path="res://icon.svg" id="2_16m80"]
 [ext_resource type="PackedScene" uid="uid://bsadwdkvdmcp1" path="res://scenes/key_scenes/characterA.tscn" id="3_l4nfy"]
 [ext_resource type="Script" path="res://scripts/character_a.gd" id="4_y8s4w"]
 [ext_resource type="PackedScene" uid="uid://bskyjnmvgga3m" path="res://scenes/key_scenes/characterB.tscn" id="5_uwlxt"]
+[ext_resource type="PackedScene" uid="uid://bhx5ge86pfjav" path="res://scenes/smaller_scenes/wrench.tscn" id="6_hnola"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qgrxv"]
 texture = ExtResource("2_16m80")
@@ -38,3 +39,6 @@ tile_set = SubResource("TileSet_sr5mr")
 script = ExtResource("4_y8s4w")
 
 [node name="characterB" parent="." instance=ExtResource("5_uwlxt")]
+
+[node name="wrench" parent="." groups=["interactable"] instance=ExtResource("6_hnola")]
+position = Vector2(665, 219)
