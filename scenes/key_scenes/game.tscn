@@ -1,13 +1,18 @@
-[gd_scene load_steps=11 format=4 uid="uid://dr6pjruspb74u"]
+[gd_scene load_steps=13 format=4 uid="uid://dr6pjruspb74u"]
 
 [ext_resource type="Texture2D" uid="uid://nl238rn7651r" path="res://textures/background_stars.png" id="1_0hcai"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_mhe3d"]
+[ext_resource type="FontFile" uid="uid://cvka4xpwf0gfv" path="res://font/Pixelify_Sans/static/PixelifySans-Regular.ttf" id="1_orwdl"]
 [ext_resource type="Texture2D" uid="uid://b3kv3gwverjnd" path="res://icon.svg" id="2_16m80"]
 [ext_resource type="PackedScene" uid="uid://bsadwdkvdmcp1" path="res://scenes/key_scenes/characterA.tscn" id="3_l4nfy"]
 [ext_resource type="Script" path="res://scripts/character_a.gd" id="4_y8s4w"]
 [ext_resource type="PackedScene" uid="uid://bskyjnmvgga3m" path="res://scenes/key_scenes/characterB.tscn" id="5_uwlxt"]
 [ext_resource type="PackedScene" uid="uid://bhx5ge86pfjav" path="res://scenes/smaller_scenes/wrench.tscn" id="6_hnola"]
 [ext_resource type="AudioStream" uid="uid://d3arsbkqn4ub5" path="res://audio/mainthemeiguess.mp3" id="8_hkgy1"]
+
+[sub_resource type="Theme" id="Theme_uob01"]
+resource_name = "default_theme"
+default_font = ExtResource("1_orwdl")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qgrxv"]
 texture = ExtResource("2_16m80")
@@ -27,6 +32,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_uob01")
 
 [node name="game" type="Node2D" parent="."]
 script = ExtResource("1_mhe3d")
