@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://dwxrlp5umwdky"]
+[gd_scene load_steps=8 format=4 uid="uid://dwxrlp5umwdky"]
 
 [ext_resource type="Texture2D" uid="uid://b3kv3gwverjnd" path="res://icon.svg" id="1_ixew8"]
 [ext_resource type="PackedScene" uid="uid://bflqo0cvrf4kc" path="res://characterA.tscn" id="1_wrk8y"]
 [ext_resource type="Script" path="res://character_a.gd" id="2_d4g5r"]
 [ext_resource type="PackedScene" uid="uid://c3er8gmc1yhdc" path="res://oxygen_fixer.tscn" id="4_0jqd6"]
+[ext_resource type="PackedScene" uid="uid://bskyjnmvgga3m" path="res://characterB.tscn" id="4_lj3na"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qgrxv"]
 texture = ExtResource("1_ixew8")
@@ -26,8 +27,7 @@ tile_set = SubResource("TileSet_sr5mr")
 [node name="characterA" parent="." instance=ExtResource("1_wrk8y")]
 script = ExtResource("2_d4g5r")
 
-[node name="characterB" parent="." instance=ExtResource("1_wrk8y")]
-script = ExtResource("2_d4g5r")
+[node name="characterB" parent="." instance=ExtResource("4_lj3na")]
 
 [node name="OxygenFixer" parent="." instance=ExtResource("4_0jqd6")]
 position = Vector2(568, 256)
