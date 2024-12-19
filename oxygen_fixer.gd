@@ -18,4 +18,7 @@ func oxygen_entered(_area: Node2D) -> void:
 
 func oxygen_exited(_area: Node2D) -> void:
 	currently_interactable = false
-	pass # Replace with function body.
+	pass # Replace with function body.\
+
+func interact():
+	print('i did an inter act')
