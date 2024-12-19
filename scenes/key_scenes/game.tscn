@@ -69,6 +69,7 @@ theme = SubResource("Theme_uob01")
 script = ExtResource("1_mhe3d")
 
 [node name="ShipRef" type="TextureRect" parent="game"]
+visible = false
 modulate = Color(1, 1, 1, 0.466667)
 offset_left = 426.0
 offset_top = 128.0
@@ -77,6 +78,7 @@ offset_bottom = 938.0
 texture = ExtResource("11_dk6ki")
 
 [node name="ColorRectUsefulForTilemapPainting" type="ColorRect" parent="game"]
+visible = false
 modulate = Color(1, 1, 1, 0.654902)
 offset_right = 1932.0
 offset_bottom = 1086.0
@@ -100,6 +102,7 @@ position = Vector2(997, 447)
 script = ExtResource("4_y8s4w")
 
 [node name="characterB" parent="game" instance=ExtResource("5_uwlxt")]
+position = Vector2(946, 407)
 
 [node name="wrench" parent="game" groups=["interactable"] instance=ExtResource("6_hnola")]
 position = Vector2(665, 219)
