@@ -1,6 +1,7 @@
 extends Area2D
 
 func interact(player: Node2D) -> void:
+	$AudioStreamPlayer.play()
 	var sprite = get_node_or_null("sprite")
 	if sprite and not player.get_node_or_null("sprite"):
 		remove_child(sprite)
