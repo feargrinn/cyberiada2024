@@ -20,7 +20,15 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 	move_and_slide()
-
+#print(self.get_collider())
 # checks if player collides with interactable areas, interacts if
 func try_to_interact():
+	print(get_tree().get_nodes_in_group("interactable"))
+	for i in get_tree().get_nodes_in_group("interactable"):
+		if i.currently_interactable:
+			i.interact()
+		else:
+			print("nope")
+	#        print($".."/OxygenFixer.currently_interactable)
+	
 	pass
