@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfgdex8lgq8n3"
-path="res://.godot/imported/o2Bad.png-a9c7a649835ab3bc257f0174a9e3b9f7.ctex"
+uid="uid://71eba7k7pn8o"
+path="res://.godot/imported/O 2Good.png-a817369e9381a6a7bb5076fd22bad4ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/Symbole GUI statku/o2Bad.png"
-dest_files=["res://.godot/imported/o2Bad.png-a9c7a649835ab3bc257f0174a9e3b9f7.ctex"]
+source_file="res://textures/Symbole GUI statku/O 2Good.png"
+dest_files=["res://.godot/imported/O 2Good.png-a817369e9381a6a7bb5076fd22bad4ba.ctex"]
 
 [params]
 
