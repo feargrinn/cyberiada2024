@@ -11,12 +11,12 @@ func _process(_delta: float) -> void:
 		get_tree().change_scene_to_file("res://scenes/key_scenes/main_menu.tscn")
 	for a in $"../MarginContainer/HBoxContainer/HBoxContainer".get_children():
 		var b = a.name
-		print(b,'is the thing im tryna print ',Globals.get(b))
-		#var good_texture_path = base_path + node_name + "good.png"
-		#var mid_texture_path = base_path + node_name + "mid.png"
-		#var bad_texture_path = base_path + node_name + "bad.png"
+		#print(b,'is the thing im tryna print ',Globals.get(b))
 		var teksturka_loc = "../MarginContainer/HBoxContainer/HBoxContainer/"+b+"/Sprite2D"
 		if Globals.get(b) > 66:
+			if Globals.get(b) > 100:
+				Globals.set(b, 100)
+			
 			var kurwatura = load("res://textures/Symbole GUI statku/" + b.capitalize() + "Good.png")
 			get_node(teksturka_loc).texture = kurwatura
 			#$"../MarginContainer/HBoxContainer/HBoxContainer/cisnienie/Sprite2D"
@@ -45,10 +45,19 @@ func _process(_delta: float) -> void:
 			var kurwatura = load("res://textures/Symbole GUI statku/" + b.capitalize() + "Bad.png")
 			get_node(teksturka_loc).texture = kurwatura
 			pass
-		elif Globals.get(b) ==0:
-			#jakis alert czy cos
+		elif Globals.get(b) <=0:
+			Globals.overall_health -= 1
+			Globals.set(b, 0)
+			#prosze o uprzejme zignorowanie faktu ze to dziala tylko co 8 for w zwiazku z czym wartosc dochodzi do -8 zanim sie poprawi
+			#JA WIEM.
+			#prosze o zignorowanie poprzednich dwoch komentarzy. były one nie na miejscu jak xle wysuniete linijki kodu
 			pass
+	Globals.urgency += 0.01
+	Globals.o2 -= 0.01
+	#print(Globals.o2)
 	$"../MarginContainer/HBoxContainer/Control/Sprite2D/ColorRect".size.x = 645 * Globals.overall_health/100
+	if Globals.overall_health <= 0:
+		lose('zycie')
 	
 	
 #this just kinda appeared on me???
