@@ -29,5 +29,5 @@ func try_to_interact():
 		#print(area)
 		if area.overlaps_body(self):
 			area.interact(self)
-			#print('shjdbadshjkjhkadshjkadjhkd')
+			
 	

@@ -1,5 +1,5 @@
 extends Area2D
-var cycles_to_next = 10
+var cycles_to_next = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,14 +22,17 @@ func timeout():
 		cycles_to_next -=1
 	
 func interact(player):
-	var sprite = player.get_node_or_null("sprite")
-	#print('p',sprite.texture.resource_path)
-	#print('p2',"res://textures/itemy kluczowe/wrench_sprite_24x12.png")
+	print('dsfhjkdsgfhjvyuidsfjnk')
+	var sprite = player.get_node("sprite")
+	print('p',sprite.texture.resource_path)
+	print('p2',"res://textures/itemy kluczowe/gasnica.final.png")
 	#zmien niżej na gaśnice
-	if sprite and sprite.texture.resource_path == "res://.godot/imported/gasnica.final.png-5bca7fbd06bf146bd03670ba483ab2a2.ctex":
-		#print('sjkdsdfjnkdsfhjkdcjdcsnkdscjndsjkdsjnkhjkdsfjkh')
+	if sprite and sprite.texture.resource_path == "res://textures/itemy kluczowe/gasnica.final.png":
+		print('sjkdsdfjnkdsfhjkdcjdcsnkdscjndsjkdsjnkhjkdsfjkh')
 		$ogin.animation = "nie pali"
 		cycles_to_next += 5
+		
+		
 		
 		
 		

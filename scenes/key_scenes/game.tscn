@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://dr6pjruspb74u"]
+[gd_scene load_steps=45 format=4 uid="uid://dr6pjruspb74u"]
 
 [ext_resource type="Texture2D" uid="uid://dtwgxia2w7r64" path="res://textures/background_stars.png" id="1_0hcai"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_mhe3d"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://8l3xkxatwxlj" path="res://scenes/smaller_scenes/valve.tscn" id="9_e188o"]
 [ext_resource type="Texture2D" uid="uid://vvhk1pvjkfer" path="res://textures/statek/ship_ref.png" id="11_dk6ki"]
 [ext_resource type="PackedScene" uid="uid://c3er8gmc1yhdc" path="res://scenes/smaller_scenes/oxygen_fixer.tscn" id="11_njxq5"]
-[ext_resource type="PackedScene" path="res://scenes/smaller_scenes/extinguisher.tscn" id="11_tvbxs"]
+[ext_resource type="PackedScene" uid="uid://dhawgog1wv7ao" path="res://scenes/smaller_scenes/extinguisher.tscn" id="11_tvbxs"]
 [ext_resource type="Texture2D" uid="uid://dhbblg65bmarf" path="res://textures/Symbole GUI statku/EnergiaGood.png" id="13_tejoq"]
 [ext_resource type="Texture2D" uid="uid://6ljgm8vxghyi" path="res://textures/consol_kokpit.png" id="14_iqsbj"]
 [ext_resource type="Texture2D" uid="uid://71eba7k7pn8o" path="res://textures/Symbole GUI statku/O 2Good.png" id="14_vuio4"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://bqro4edpinsnn" path="res://textures/Symbole GUI statku/WorkshopGood.png" id="17_pxd5n"]
 [ext_resource type="Texture2D" uid="uid://cy4mknu2nivo2" path="res://textures/Symbole GUI statku/LabGood.png" id="18_0hldj"]
 [ext_resource type="Texture2D" uid="uid://yraqxdibqe5u" path="res://textures/Symbole GUI statku/CisnienieGood.png" id="19_1n7c5"]
+[ext_resource type="Texture2D" uid="uid://d4j3dgmbrun26" path="res://textures/itemy kluczowe/transparent.png" id="19_mde88"]
 [ext_resource type="Texture2D" uid="uid://bevjoqxs7fevx" path="res://textures/Symbole GUI statku/SilnikGood.png" id="20_pm5kd"]
 [ext_resource type="Script" path="res://scenes/key_scenes/ogien.gd" id="21_feknf"]
 [ext_resource type="Texture2D" uid="uid://dd6o7bqplbclx" path="res://textures/ogieni.png" id="22_3nhdm"]
@@ -98,6 +99,13 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e0wth"]
 size = Vector2(0.41, 0.388964)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yp3c0"]
+size = Vector2(0.390002, 0.333397)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73g8a"]
+atlas = ExtResource("19_mde88")
+region = Rect2(0, 0, 1, 1)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ysvq4"]
 atlas = ExtResource("22_3nhdm")
 region = Rect2(0, 0, 15, 20)
@@ -108,7 +116,10 @@ region = Rect2(15, 0, 15, 20)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7wbly"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73g8a")
+}],
 "loop": true,
 "name": &"nie pali",
 "speed": 5.0
@@ -122,6 +133,21 @@ animations = [{
 }],
 "loop": true,
 "name": &"pali",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1g62"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pf1ic"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"rura_bad",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"rura_good",
 "speed": 5.0
 }]
 
@@ -241,28 +267,37 @@ position = Vector2(-49.5, 23)
 scale = Vector2(100, 107.979)
 shape = SubResource("RectangleShape2D_e0wth")
 
-[node name="characterA" parent="game" instance=ExtResource("3_l4nfy")]
-position = Vector2(997, 447)
-script = ExtResource("4_y8s4w")
-
-[node name="characterB" parent="game" instance=ExtResource("5_uwlxt")]
-position = Vector2(946, 407)
-
 [node name="ogien" type="Area2D" parent="game" groups=["interactable"]]
 position = Vector2(1229, 608)
 rotation = -3.14159
 script = ExtResource("21_feknf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="game/ogien"]
-position = Vector2(-49.5, 23)
+position = Vector2(248.501, 263.999)
 scale = Vector2(100, 107.979)
-shape = SubResource("RectangleShape2D_e0wth")
+shape = SubResource("RectangleShape2D_yp3c0")
 
 [node name="ogin" type="AnimatedSprite2D" parent="game/ogien"]
 position = Vector2(247.001, 263.999)
 sprite_frames = SubResource("SpriteFrames_7wbly")
-animation = &"nie pali"
+animation = &"pali"
 flip_v = true
+
+[node name="rury" type="Area2D" parent="game"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/rury"]
+shape = SubResource("RectangleShape2D_e1g62")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="game/rury"]
+sprite_frames = SubResource("SpriteFrames_pf1ic")
+animation = &"rura_bad"
+
+[node name="characterA" parent="game" instance=ExtResource("3_l4nfy")]
+position = Vector2(997, 447)
+script = ExtResource("4_y8s4w")
+
+[node name="characterB" parent="game" instance=ExtResource("5_uwlxt")]
+position = Vector2(946, 407)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
