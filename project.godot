@@ -27,6 +27,10 @@ window/size/viewport_height=1080
 window/size/mode=4
 window/stretch/mode="canvas_items"
 
+[editor]
+
+movie_writer/movie_file="C:/Users/toto/Documents/Godot_projects/lemjam/movi.avi"
+
 [global_group]
 
 interactable=""
