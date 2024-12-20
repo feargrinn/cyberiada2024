@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://8l3xkxatwxlj" path="res://scenes/smaller_scenes/valve.tscn" id="9_e188o"]
 [ext_resource type="Texture2D" uid="uid://vvhk1pvjkfer" path="res://textures/statek/ship_ref.png" id="11_dk6ki"]
 [ext_resource type="PackedScene" uid="uid://c3er8gmc1yhdc" path="res://scenes/smaller_scenes/oxygen_fixer.tscn" id="11_njxq5"]
-[ext_resource type="PackedScene" uid="uid://dhawgog1wv7ao" path="res://scenes/smaller_scenes/extinguisher.tscn" id="11_tvbxs"]
+[ext_resource type="PackedScene" path="res://scenes/smaller_scenes/extinguisher.tscn" id="11_tvbxs"]
 [ext_resource type="Texture2D" uid="uid://dhbblg65bmarf" path="res://textures/Symbole GUI statku/EnergiaGood.png" id="13_tejoq"]
 [ext_resource type="Texture2D" uid="uid://6ljgm8vxghyi" path="res://textures/consol_kokpit.png" id="14_iqsbj"]
 [ext_resource type="Texture2D" uid="uid://71eba7k7pn8o" path="res://textures/Symbole GUI statku/O 2Good.png" id="14_vuio4"]
