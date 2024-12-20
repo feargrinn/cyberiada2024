@@ -22,10 +22,10 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_released("ui_cancel"):
 		get_tree().change_scene_to_file("res://scenes/key_scenes/main_menu.tscn")
-	for a in $"../MarginContainer/HBoxContainer/HBoxContainer".get_children():
+	for a in $"gui/MarginContainer/HBoxContainer/HBoxContainer".get_children():
 		var b = a.name
 		#print(b,'is the thing im tryna print ',Globals.get(b))
-		var teksturka_loc = "../MarginContainer/HBoxContainer/HBoxContainer/"+b+"/Sprite2D"
+		var teksturka_loc = "gui/MarginContainer/HBoxContainer/HBoxContainer/"+b+"/Sprite2D"
 		if Globals.get(b) > 66:
 			if Globals.get(b) > 100:
 				Globals.set(b, 100)
@@ -68,7 +68,7 @@ func _process(_delta: float) -> void:
 	Globals.urgency += 0.01
 	#Globals.o2 -= 0.05
 	#print(Globals.o2)
-	$"../MarginContainer/HBoxContainer/Control/Sprite2D/ColorRect".size.x = 645 * Globals.overall_health/100
+	$"gui/MarginContainer/HBoxContainer/Control/Sprite2D/ColorRect".size.x = 645 * Globals.overall_health/100
 	if Globals.overall_health <= 0:
 		lose('zycie')
 	
