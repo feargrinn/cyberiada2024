@@ -48,7 +48,9 @@ func _process(_delta: float) -> void:
 		elif Globals.get(b) ==0:
 			#jakis alert czy cos
 			pass
-
+	$"../MarginContainer/HBoxContainer/Control/Sprite2D/ColorRect".size.x = 645 * Globals.overall_health/100
+	
+	
 #this just kinda appeared on me???
 #<<<<<<< Updated upstream
 #=======

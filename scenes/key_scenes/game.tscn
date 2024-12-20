@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://dr6pjruspb74u"]
+[gd_scene load_steps=29 format=4 uid="uid://dr6pjruspb74u"]
 
 [ext_resource type="Texture2D" uid="uid://dtwgxia2w7r64" path="res://textures/background_stars.png" id="1_0hcai"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_mhe3d"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://cy4mknu2nivo2" path="res://textures/Symbole GUI statku/LabGood.png" id="18_0hldj"]
 [ext_resource type="Texture2D" uid="uid://yraqxdibqe5u" path="res://textures/Symbole GUI statku/CisnienieGood.png" id="19_1n7c5"]
 [ext_resource type="Texture2D" uid="uid://bevjoqxs7fevx" path="res://textures/Symbole GUI statku/SilnikGood.png" id="20_pm5kd"]
+[ext_resource type="Texture2D" uid="uid://bfp71nnbeoe54" path="res://textures/pasek_zycia3.png" id="25_at555"]
 
 [sub_resource type="Theme" id="Theme_uob01"]
 resource_name = "default_theme"
@@ -240,6 +241,15 @@ texture = ExtResource("20_pm5kd")
 
 [node name="Control" type="Control" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 6
 
 [node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/Control"]
+texture = ExtResource("25_at555")
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/HBoxContainer/Control/Sprite2D"]
+z_index = -1
+offset_left = -302.0
+offset_top = -25.0
+offset_right = 343.0
+offset_bottom = 28.0
+color = Color(1, 0, 0.301961, 1)
