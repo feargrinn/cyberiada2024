@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=3 uid="uid://bsadwdkvdmcp1"]
 
-[ext_resource type="Script" path="res://scripts/character_b.gd" id="1_2jbyr"]
+[ext_resource type="Script" path="res://scripts/character_a.gd" id="1_b3w5a"]
 [ext_resource type="Texture2D" uid="uid://dan673ue0vlph" path="res://textures/postacie/wobot1_sprite_32x32.png" id="2_eer25"]
 [ext_resource type="Texture2D" uid="uid://cdtog1o2hhc80" path="res://textures/postacie/characters_spritesheet)animated_128x256.png" id="2_fyaoy"]
 [ext_resource type="Texture2D" uid="uid://cyewabnyy5jch" path="res://textures/pop_up.png" id="3_2amcu"]
@@ -156,14 +156,15 @@ animations = [{
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 motion_mode = 1
-script = ExtResource("1_2jbyr")
+script = ExtResource("1_b3w5a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ltdfg")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_i45jf")
-animation = &"up"
+animation = &"idle"
+autoplay = "idle"
 
 [node name="popup" type="Sprite2D" parent="."]
 position = Vector2(1.35937, -32.875)
