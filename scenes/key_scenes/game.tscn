@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://bsadwdkvdmcp1" path="res://scenes/key_scenes/characterA.tscn" id="3_l4nfy"]
 [ext_resource type="Texture2D" uid="uid://d3rn03v0ii6x5" path="res://textures/ship1.png" id="4_1nbvs"]
 [ext_resource type="Texture2D" uid="uid://d2qohk16bplma" path="res://textures/tilemap/tilemap.png" id="4_cmho3"]
-[ext_resource type="Script" path="res://scripts/character_a.gd" id="4_y8s4w"]
 [ext_resource type="PackedScene" uid="uid://bskyjnmvgga3m" path="res://scenes/key_scenes/characterB.tscn" id="5_uwlxt"]
 [ext_resource type="PackedScene" uid="uid://bhx5ge86pfjav" path="res://scenes/smaller_scenes/wrench.tscn" id="6_hnola"]
 [ext_resource type="AudioStream" uid="uid://d3arsbkqn4ub5" path="res://audio/mainthemeiguess.mp3" id="8_hkgy1"]
@@ -31,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://bfp71nnbeoe54" path="res://textures/pasek_zycia3.png" id="25_at555"]
 [ext_resource type="Texture2D" uid="uid://75nqcal7il3d" path="res://textures/kabele.png" id="27_3apdw"]
 [ext_resource type="Script" path="res://scenes/key_scenes/kabele.gd" id="28_yrode"]
+[ext_resource type="AudioStream" uid="uid://cld33t3rbcgrt" path="res://audio/alarm.mp3" id="31_o167l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2upoi"]
 texture = ExtResource("4_cmho3")
@@ -234,7 +234,6 @@ shape = SubResource("RectangleShape2D_e0wth")
 
 [node name="characterA" parent="." instance=ExtResource("3_l4nfy")]
 position = Vector2(997, 447)
-script = ExtResource("4_y8s4w")
 
 [node name="characterB" parent="." instance=ExtResource("5_uwlxt")]
 position = Vector2(946, 407)
@@ -364,3 +363,6 @@ color = Color(1, 0, 0.301961, 1)
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(960, 540)
 zoom = Vector2(1.4, 1.4)
+
+[node name="AudioStreamPlayer2DAlarm" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("31_o167l")

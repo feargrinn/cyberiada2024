@@ -18,6 +18,7 @@ func _process(delta: float) -> void:
 func timeout():
 	if cycles_to_next == 0:
 		$Kabele.animation = "broke"
+		$"../AudioStreamPlayer2DAlarm".play()
 	else:
 		cycles_to_next -=1
 	
@@ -28,6 +29,7 @@ func interact(player):
 	if sprite and sprite.texture.resource_path == "res://textures/itemy kluczowe/wrench_sprite_24x12.png":
 		print('sjkdsdfjnkdsfhjkdcjdcsnkdscjndsjkdsjnkhjkdsfjkh')
 		$Kabele.animation = "non-vroke"
+		$"../AudioStreamPlayer2DAlarm".stop()
 		cycles_to_next += 5
 		
 		
