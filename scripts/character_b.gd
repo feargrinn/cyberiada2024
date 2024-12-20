@@ -20,6 +20,7 @@ func _physics_process(_delta: float) -> void:
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 	move_and_slide()
+	
 #print(self.get_collider())
 # checks if player collides with interactable areas, interacts if
 func try_to_interact():

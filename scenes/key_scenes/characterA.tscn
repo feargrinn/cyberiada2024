@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bsadwdkvdmcp1"]
+[gd_scene load_steps=5 format=3 uid="uid://bsadwdkvdmcp1"]
 
 [ext_resource type="Script" path="res://scripts/character_b.gd" id="1_2jbyr"]
 [ext_resource type="Texture2D" uid="uid://dan673ue0vlph" path="res://textures/postacie/wobot1_sprite_32x32.png" id="2_eer25"]
+[ext_resource type="Texture2D" uid="uid://cyewabnyy5jch" path="res://textures/pop_up.png" id="3_2amcu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ltdfg"]
 
@@ -14,3 +15,19 @@ shape = SubResource("CircleShape2D_ltdfg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_eer25")
+
+[node name="popup" type="Sprite2D" parent="."]
+position = Vector2(1.35937, -32.875)
+scale = Vector2(0.311235, 0.315104)
+texture = ExtResource("3_2amcu")
+
+[node name="Label" type="Label" parent="popup"]
+z_index = 1
+offset_left = -193.935
+offset_top = -32.1322
+offset_right = 201.065
+offset_bottom = 68.8678
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 13
+text = "Słuchaj maszyno… Chciałbym cię przeprosić. Wiesz… wynikło między nami małe nieporozumienie, ale to przecież drobiazg w gruncie rzeczy. Ja nie miałem zamiaru…"
+autowrap_mode = 2

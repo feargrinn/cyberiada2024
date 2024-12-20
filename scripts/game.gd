@@ -5,6 +5,19 @@ var scene = preload("res://scenes/smaller_scenes/gameover.tscn")
 
 func _ready() -> void:
 	$"AudioStreamPlayer".play()
+	Globals.urgency = 1.0 #goes down
+	Globals.overall_health = 100
+
+#dużo statystyk varowych (0-100)
+	Globals.cisnienie = 10
+	Globals.energia = 20
+	Globals.kokpit = 30
+	Globals.lab = 40
+	Globals.o2 = 100
+	Globals.reaktor = 60
+	Globals.silnik = 70
+	Globals.workshop = 80
+
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_released("ui_cancel"):
@@ -53,7 +66,7 @@ func _process(_delta: float) -> void:
 			#prosze o zignorowanie poprzednich dwoch komentarzy. były one nie na miejscu jak xle wysuniete linijki kodu
 			pass
 	Globals.urgency += 0.01
-	Globals.o2 -= 0.01
+	Globals.o2 -= 0.1
 	#print(Globals.o2)
 	$"../MarginContainer/HBoxContainer/Control/Sprite2D/ColorRect".size.x = 645 * Globals.overall_health/100
 	if Globals.overall_health <= 0:
