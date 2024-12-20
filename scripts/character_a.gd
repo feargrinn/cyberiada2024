@@ -13,26 +13,28 @@ func _physics_process(_delta: float) -> void:
 	if direction:
 		print("direction ", direction)
 		velocity.x = direction * SPEED
-		if direction > 0:
-			$Sprite2D.play("right")
-		else:
-			$Sprite2D.play("left")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		$Sprite2D.play("idle")
 				
 	var direction_v := Input.get_axis("A_gora", "A_dol")
 	if direction_v:
 		print("direction_v ", direction_v)
 		velocity.y = direction_v * SPEED
-		if direction > 0:
-			$Sprite2D.play("up")
-		else:
-			$Sprite2D.play("down")
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
-		$Sprite2D.play("idle")
 	move_and_slide()
+	
+	if direction or direction_v:
+		if direction > 0:
+			$Sprite2D.play("right")
+		elif direction < 0:
+			$Sprite2D.play("left")
+		if direction_v < 0:
+			$Sprite2D.play("up")
+		elif direction_v > 0:
+			$Sprite2D.play("down")
+	elif direction == 0 and direction_v == 0:
+		$Sprite2D.play("idle")
 	
 #print(self.get_collider())
 # checks if player collides with interactable areas, interacts if

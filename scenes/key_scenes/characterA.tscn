@@ -163,8 +163,10 @@ shape = SubResource("CircleShape2D_ltdfg")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_i45jf")
-animation = &"idle"
+animation = &"down"
 autoplay = "idle"
+frame = 1
+frame_progress = 0.297579
 
 [node name="popup" type="Sprite2D" parent="."]
 position = Vector2(1.35937, -32.875)
