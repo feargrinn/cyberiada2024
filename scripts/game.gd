@@ -13,12 +13,13 @@ func _process(_delta: float) -> void:
 		print(a)
 		var b = a.name
 		print(b,'is the thing im tryna print ',Globals.get(b))
-		
-<<<<<<< Updated upstream
-=======
-		
 
->>>>>>> Stashed changes
+#this just kinda appeared on me???
+#<<<<<<< Updated upstream
+#=======
+		
+#along with this????
+#>>>>>>> Stashed changes
 func lose(why = "No reasyon at all"):
 	var gameovar = scene.instantiate()
 	add_child(gameovar) 
