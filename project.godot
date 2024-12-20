@@ -14,6 +14,7 @@ config/name="gamejam working"
 run/main_scene="res://scenes/key_scenes/game.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://textures/postacie/wobot1_sprite_32x32.png"
+config/windows_native_icon="res://textures/icon/game_icon.ico"
 
 [autoload]
 
