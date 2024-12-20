@@ -2,7 +2,11 @@
 
 importer="mp3"
 type="AudioStreamMP3"
+<<<<<<< Updated upstream
 uid="uid://c6oftucxvcfjx"
+=======
+uid="uid://iy00nqbtuhk5"
+>>>>>>> Stashed changes
 path="res://.godot/imported/klik-menu1.mp3-e31484a30c6808ff22b1e2044ebfaeac.mp3str"
 
 [deps]

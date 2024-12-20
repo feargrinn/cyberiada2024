@@ -12,7 +12,11 @@
 [ext_resource type="PackedScene" uid="uid://8l3xkxatwxlj" path="res://scenes/smaller_scenes/valve.tscn" id="9_e188o"]
 [ext_resource type="Texture2D" uid="uid://vvhk1pvjkfer" path="res://textures/statek/ship_ref.png" id="11_dk6ki"]
 [ext_resource type="PackedScene" uid="uid://c3er8gmc1yhdc" path="res://scenes/smaller_scenes/oxygen_fixer.tscn" id="11_njxq5"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" path="res://scenes/smaller_scenes/extinguisher.tscn" id="11_tvbxs"]
+=======
+[ext_resource type="PackedScene" uid="uid://dhawgog1wv7ao" path="res://scenes/smaller_scenes/extinguisher.tscn" id="11_tvbxs"]
+>>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://dhbblg65bmarf" path="res://textures/Symbole GUI statku/EnergiaGood.png" id="13_tejoq"]
 [ext_resource type="Texture2D" uid="uid://6ljgm8vxghyi" path="res://textures/consol_kokpit.png" id="14_iqsbj"]
 [ext_resource type="Texture2D" uid="uid://71eba7k7pn8o" path="res://textures/Symbole GUI statku/o2Good.png" id="14_vuio4"]
@@ -170,11 +174,19 @@ position = Vector2(946, 407)
 layout_mode = 2
 size_flags_vertical = 8
 
+<<<<<<< Updated upstream
 [node name="cisnienie" type="Control" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/cisnienie"]
+=======
+[node name="Control" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control"]
+>>>>>>> Stashed changes
 texture = ExtResource("13_tejoq")
 
 [node name="Control2" type="Control" parent="HBoxContainer"]
@@ -219,9 +231,24 @@ size_flags_horizontal = 3
 [node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control7"]
 texture = ExtResource("19_1n7c5")
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
 [node name="Control8" type="Control" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Control8"]
 texture = ExtResource("20_pm5kd")
+<<<<<<< Updated upstream
+=======
+=======
+[node name="workshop" type="Control" parent="MarginContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/HBoxContainer/workshop"]
+texture = ExtResource("21_03kw8")
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes

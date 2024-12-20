@@ -14,6 +14,11 @@ func _process(_delta: float) -> void:
 		var b = a.name
 		print(b,'is the thing im tryna print ',Globals.get(b))
 		
+<<<<<<< Updated upstream
+=======
+		
+
+>>>>>>> Stashed changes
 func lose(why = "No reasyon at all"):
 	var gameovar = scene.instantiate()
 	add_child(gameovar) 
@@ -22,5 +27,7 @@ func lose(why = "No reasyon at all"):
 	var packed_scene = PackedScene.new()
 	packed_scene.pack(gameovar)
 	get_tree().change_scene_to_packed(packed_scene)
+	
+	
 	
 	
