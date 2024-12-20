@@ -17,6 +17,8 @@ func _process(_delta: float) -> void:
 		#var bad_texture_path = base_path + node_name + "bad.png"
 		var teksturka_loc = "../MarginContainer/HBoxContainer/HBoxContainer/"+b+"/Sprite2D"
 		if Globals.get(b) > 66:
+			var kurwatura = load("res://textures/Symbole GUI statku/" + b.capitalize() + "Good.png")
+			get_node(teksturka_loc).texture = kurwatura
 			#$"../MarginContainer/HBoxContainer/HBoxContainer/cisnienie/Sprite2D"
 			#$"../MarginContainer/HBoxContainer/HBoxContainer/lab"
 			#get_node(teksturka_loc).Texture = ("res://textures/Symbole GUI statku/" + b.capitalize() + "good.png")
@@ -35,14 +37,16 @@ func _process(_delta: float) -> void:
 			#print($"../MarginContainer/HBoxContainer/HBoxContainer/lab/Sprite2D")
 			#print($"../MarginContainer/HBoxContainer/HBoxContainer/cisnienie/Sprite2D".texture)
 			#print(get_node(teksturka_loc).get_child(0))
-			print("res://textures/Symbole GUI statku/" + b.capitalize() + "Mid.png")
+			#print("res://textures/Symbole GUI statku/" + b.capitalize() + "Mid.png")
 			var kurwatura = load("res://textures/Symbole GUI statku/" + b.capitalize() + "Mid.png")
 			get_node(teksturka_loc).texture = kurwatura
 			
-			print('abrakurva')
 		elif Globals.get(b) <=33  and Globals.get(b) >0:
+			var kurwatura = load("res://textures/Symbole GUI statku/" + b.capitalize() + "Bad.png")
+			get_node(teksturka_loc).texture = kurwatura
 			pass
 		elif Globals.get(b) ==0:
+			#jakis alert czy cos
 			pass
 
 #this just kinda appeared on me???

@@ -241,3 +241,5 @@ texture = ExtResource("20_pm5kd")
 [node name="Control" type="Control" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/Control"]
