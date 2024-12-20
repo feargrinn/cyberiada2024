@@ -16,8 +16,9 @@ func interact(player: Node2D) -> void:
 			player.remove_child(sprite)
 			add_child(sprite)
 func swiatlo(body = null):
-	if body.name != "TileMapLayer":
-		get_node_or_null("sprite").modulate= Color("125aff")
+	if(get_node_or_null("sprite")):
+		if body.name != "TileMapLayer":
+			get_node_or_null("sprite").modulate= Color("125aff")
 func nie(_body = null):
 	if(get_node_or_null("sprite")):
 		get_node_or_null("sprite").modulate= Color("ffffff")
