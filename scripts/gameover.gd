@@ -12,7 +12,7 @@ func _ready() -> void:
 
 
 func _on_button_pressed(button_name : String):
-	print('welpppppppppp')
+	#print('welpppppppppp')
 	match button_name:
 		"quittomain":
 			get_tree().change_scene_to_file("res://scenes/key_scenes/main_menu.tscn")

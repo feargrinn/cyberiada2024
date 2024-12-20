@@ -70,7 +70,7 @@ func _process(_delta: float) -> void:
 	#print(Globals.o2)
 	$"gui/MarginContainer/HBoxContainer/Control/Sprite2D/ColorRect".size.x = 645 * Globals.overall_health/100
 	if Globals.overall_health <= 0:
-		lose('zycie')
+		lose(':(')
 	
 	
 #this just kinda appeared on me???

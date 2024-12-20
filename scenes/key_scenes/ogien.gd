@@ -12,7 +12,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if $ogin.animation == 'pali':
-		Globals.lab -= 0.15
+		Globals.lab -= 0.05
 		
 
 func timeout():
