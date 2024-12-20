@@ -83,13 +83,17 @@ animations = [{
 "name": &"broke",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_iqsbj")
+}],
 "loop": true,
 "name": &"non-vroke",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qrbi7"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e0wth"]
+size = Vector2(0.41, 0.388964)
 
 [node name="gui" type="MarginContainer"]
 anchors_preset = 15
@@ -191,6 +195,22 @@ texture = ExtResource("16_eqj1l")
 position = Vector2(986, 439)
 polygon = PackedVector2Array(-16, 7.5, -16, -7.5, 16, -7.5, 16, 7.5)
 
+[node name="kable" type="Area2D" parent="game" groups=["interactable"]]
+position = Vector2(1229, 608)
+rotation = -3.14159
+script = ExtResource("28_yrode")
+
+[node name="Kabele" type="AnimatedSprite2D" parent="game/kable"]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_q4mcq")
+animation = &"non-vroke"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/kable"]
+position = Vector2(-49.5, 23)
+scale = Vector2(100, 107.979)
+shape = SubResource("RectangleShape2D_e0wth")
+
 [node name="characterA" parent="game" instance=ExtResource("3_l4nfy")]
 position = Vector2(997, 447)
 script = ExtResource("4_y8s4w")
@@ -285,18 +305,3 @@ offset_top = -25.0
 offset_right = 343.0
 offset_bottom = 28.0
 color = Color(1, 0, 0.301961, 1)
-
-[node name="kable" type="Area2D" parent="."]
-position = Vector2(1229, 608)
-rotation = -3.14159
-script = ExtResource("28_yrode")
-
-[node name="Kabele" type="AnimatedSprite2D" parent="kable"]
-sprite_frames = SubResource("SpriteFrames_q4mcq")
-animation = &"non-vroke"
-flip_h = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="kable"]
-position = Vector2(1229, 608)
-rotation = 3.14159
-shape = SubResource("RectangleShape2D_qrbi7")

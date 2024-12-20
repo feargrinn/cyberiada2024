@@ -26,5 +26,8 @@ func _physics_process(_delta: float) -> void:
 func try_to_interact():
 	#print(get_tree().get_nodes_in_group("interactable"))
 	for area in get_tree().get_nodes_in_group("interactable"):
+		#print(area)
 		if area.overlaps_body(self):
 			area.interact(self)
+			#print('shjdbadshjkjhkadshjkadjhkd')
+	

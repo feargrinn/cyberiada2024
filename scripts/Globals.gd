@@ -11,5 +11,5 @@ var kokpit = 30
 var lab = 40
 var o2 = 100
 var reaktor = 60
-var silnik = 70
-var workshop = 80
+var silnik = 100
+var workshop = 100

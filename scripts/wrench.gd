@@ -6,6 +6,7 @@ func interact(player: Node2D) -> void:
 	var sprite = get_node_or_null("sprite")
 	if sprite and not player.get_node_or_null("sprite"):
 		$AudioStreamPlayer.play()
+		nie(self)
 		remove_child(sprite)
 		player.add_child(sprite)
 	elif player.get_node_or_null("sprite") and not get_node_or_null("sprite"):
@@ -18,5 +19,6 @@ func swiatlo(body = null):
 	if body.name != "TileMapLayer":
 		get_node_or_null("sprite").modulate= Color("125aff")
 func nie(_body = null):
-	get_node_or_null("sprite").modulate= Color("ffffff")
+	if(get_node_or_null("sprite")):
+		get_node_or_null("sprite").modulate= Color("ffffff")
 	
