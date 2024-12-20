@@ -1,11 +1,11 @@
 extends Area2D
-var cycles_to_next = 1
+var cycles_to_next = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var timer = Timer.new()
 	add_child(timer)
-	timer.start(randf_range(1,3))
+	timer.start(randf_range(3,5))
 	timer.connect("timeout", timeout)
 
 
@@ -29,7 +29,7 @@ func interact(player):
 	print('p2',"res://textures/itemy kluczowe/gasnica.final.png")
 	#zmien niżej na gaśnice
 	if sprite and sprite.texture.resource_path == "res://textures/itemy kluczowe/gasnica.final.png":
-		print('sjkdsdfjnkdsfhjkdcjdcsnkdscjndsjkdsjnkhjkdsfjkh')
+		print('nie pali print')
 		$ogin.animation = "nie pali"
 		$"../AudioStreamPlayer2DAlarm".stop()
 		cycles_to_next += 5

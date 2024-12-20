@@ -225,6 +225,7 @@ script = ExtResource("28_yrode")
 z_index = 1
 sprite_frames = SubResource("SpriteFrames_q4mcq")
 animation = &"non-vroke"
+autoplay = "non-vroke"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="kable"]
@@ -252,6 +253,7 @@ shape = SubResource("RectangleShape2D_e0wth")
 position = Vector2(247.001, 263.999)
 sprite_frames = SubResource("SpriteFrames_7wbly")
 animation = &"nie pali"
+autoplay = "nie pali"
 flip_v = true
 
 [node name="gui" type="MarginContainer" parent="."]
