@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dd6o7bqplbclx"
-path="res://.godot/imported/ogieni.png-90f92d73206370b7de103e807c022bff.ctex"
+path="res://.godot/imported/ogieni.png-211ca0f3f87fe4b80f11ff6b0026dde2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ogieni.png"
-dest_files=["res://.godot/imported/ogieni.png-90f92d73206370b7de103e807c022bff.ctex"]
+source_file="res://textures/ogieni.png"
+dest_files=["res://.godot/imported/ogieni.png-211ca0f3f87fe4b80f11ff6b0026dde2.ctex"]
 
 [params]
 

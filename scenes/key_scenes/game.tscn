@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://dr6pjruspb74u"]
+[gd_scene load_steps=40 format=4 uid="uid://dr6pjruspb74u"]
 
 [ext_resource type="Texture2D" uid="uid://dtwgxia2w7r64" path="res://textures/background_stars.png" id="1_0hcai"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_mhe3d"]
@@ -26,6 +26,8 @@
 [ext_resource type="Texture2D" uid="uid://cy4mknu2nivo2" path="res://textures/Symbole GUI statku/LabGood.png" id="18_0hldj"]
 [ext_resource type="Texture2D" uid="uid://yraqxdibqe5u" path="res://textures/Symbole GUI statku/CisnienieGood.png" id="19_1n7c5"]
 [ext_resource type="Texture2D" uid="uid://bevjoqxs7fevx" path="res://textures/Symbole GUI statku/SilnikGood.png" id="20_pm5kd"]
+[ext_resource type="Script" path="res://scenes/key_scenes/ogien.gd" id="21_feknf"]
+[ext_resource type="Texture2D" uid="uid://dd6o7bqplbclx" path="res://textures/ogieni.png" id="22_3nhdm"]
 [ext_resource type="Texture2D" uid="uid://bfp71nnbeoe54" path="res://textures/pasek_zycia3.png" id="25_at555"]
 [ext_resource type="Texture2D" uid="uid://75nqcal7il3d" path="res://textures/kabele.png" id="27_3apdw"]
 [ext_resource type="Script" path="res://scenes/key_scenes/kabele.gd" id="28_yrode"]
@@ -95,6 +97,33 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e0wth"]
 size = Vector2(0.41, 0.388964)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysvq4"]
+atlas = ExtResource("22_3nhdm")
+region = Rect2(0, 0, 15, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyo2m"]
+atlas = ExtResource("22_3nhdm")
+region = Rect2(15, 0, 15, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7wbly"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"nie pali",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysvq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wyo2m")
+}],
+"loop": true,
+"name": &"pali",
+"speed": 5.0
+}]
 
 [node name="gui" type="MarginContainer"]
 anchors_preset = 15
@@ -218,6 +247,22 @@ script = ExtResource("4_y8s4w")
 
 [node name="characterB" parent="game" instance=ExtResource("5_uwlxt")]
 position = Vector2(946, 407)
+
+[node name="ogien" type="Area2D" parent="game" groups=["interactable"]]
+position = Vector2(1229, 608)
+rotation = -3.14159
+script = ExtResource("21_feknf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game/ogien"]
+position = Vector2(-49.5, 23)
+scale = Vector2(100, 107.979)
+shape = SubResource("RectangleShape2D_e0wth")
+
+[node name="ogin" type="AnimatedSprite2D" parent="game/ogien"]
+position = Vector2(247.001, 263.999)
+sprite_frames = SubResource("SpriteFrames_7wbly")
+animation = &"nie pali"
+flip_v = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
